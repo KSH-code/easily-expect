@@ -4,7 +4,7 @@
   "description": "You can easily use expect",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha $(find ./test -name '*.js') --require mocha-clean --reporter=mocha-better-spec-reporter",
+    "test": "npm run standard && node ./node_modules/mocha/bin/mocha $(find ./test -name '*.js') --require mocha-clean --reporter=mocha-better-spec-reporter",
     "standard": "standard \"./*.js\" \"test/*.js\""
   },
   "author": "KSH-Code <tjdgnsqn133@gmail.com> (github.com/ksh-code)",
