@@ -1,9 +1,10 @@
+/* global describe, it */
 'use strict'
 const { checkType } = require('../index')
 
 describe('Test Data Type', () => {
   it('String Type Test', () => {
-    checkType('string', 'a', "b", `c`)
+    checkType('string', 'a', 'b', `c`)
   })
   it('Number Type Test', () => {
     checkType('number', 1, 0.0, 3.0)
