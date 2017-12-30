@@ -1,4 +1,4 @@
 ```
 git checkout develop
 ```
-develop branch => remote master branch
+develop branch => remote develop branch
