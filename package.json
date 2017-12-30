@@ -8,6 +8,11 @@
   },
   "author": "KSH-Code <tjdgnsqn133@gmail.com> (github.com/ksh-code)",
   "license": "MIT",
+  "keywords": [
+    "expect",
+    "assert",
+    "easily"
+  ],
   "dependencies": {
     "chai": "^4.1.2",
     "fs": "0.0.1-security",
