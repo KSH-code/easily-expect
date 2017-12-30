@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/KSH-code/easily-expect.svg?branch=master)](https://travis-ci.org/KSH-code/easily-expect)
+
 # HOW TO USE ?
 ```
 npm install --save easily-expect
