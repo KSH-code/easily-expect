@@ -6,6 +6,7 @@ before_install:
   - npm install
 branches:
   only:
+    - master
     - develop
 matrix:
   allow_failures:
