@@ -12,6 +12,10 @@ describe (...)
         checkType('string', '123', '0')
     it (...)
         checkMatch(/\d/, '1', '123', '1234')
+    it (...)
+        checkEqual('abc', 'abc', 'aaa') // aaa is false
 ```
 ## Example
-[index.test.js](test/index.test.js)
+* [checkType](https://github.com/KSH-code/easily-expect/blob/master/test/checkType.test.js)
+* [checkMatch](https://github.com/KSH-code/easily-expect/blob/master/test/checkMatch.test.js)
+* [checkEqual](https://github.com/KSH-code/easily-expect/blob/master/test/checkEqual.test.js)

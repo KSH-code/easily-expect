@@ -17,3 +17,10 @@ exports.checkMatch = (expression, ...objects) => {
     expect(object).to.match(expression)
   }
 }
+
+exports.checkEqual = (data, ...objects) => {
+  for (let object of objects) {
+    if (!Array.isArray(object) && typeof object === 'object') expect(JSON.stringify(object)).to.equal(JSON.stringify(data))
+    else expect(object).to.equal(data)
+  }
+}
