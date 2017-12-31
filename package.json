@@ -1,6 +1,6 @@
 {
   "name": "easily-expect",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "You can easily use expect",
   "main": "index.js",
   "scripts": {
