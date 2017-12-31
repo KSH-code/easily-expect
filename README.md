@@ -14,4 +14,5 @@ describe (...)
         checkMatch(/\d/, '1', '123', '1234')
 ```
 ## Example
-[index.test.js](test/index.test.js)
+* [checkType](https://github.com/KSH-code/easily-expect/blob/master/test/checkType.test.js)
+* [checkMatch](https://github.com/KSH-code/easily-expect/blob/master/test/checkMatch.test.js)
