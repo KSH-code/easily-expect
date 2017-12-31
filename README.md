@@ -5,11 +5,13 @@
 npm install --save easily-expect
 ```
 ```
-const { checkType } = require('easily-expect')
+const { checkType, checkMatch } = require('easily-expect')
 
 describe (...)
     it (...)
-        checkType('string' ...objects)
+        checkType('string', '123', '0')
+    it (...)
+        checkMatch(/\d/, '1', '123', '1234')
 ```
 ## Example
 [index.test.js](test/index.test.js)
