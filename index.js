@@ -1,6 +1,6 @@
 'use strict'
 const { expect } = require('chai')
-
+let cacheData = {}
 exports.checkType = (dataType, ...objects) => {
   dataType = dataType.toLowerCase()
   for (let object of objects) {
@@ -23,4 +23,24 @@ exports.checkEqual = (data, ...objects) => {
     if (!Array.isArray(object) && typeof object === 'object') expect(JSON.stringify(object)).to.equal(JSON.stringify(data))
     else expect(object).to.equal(data)
   }
+}
+
+exports.checkObject = (...objects) => {
+  exports.checkType('object', ...objects)
+  for (let i = objects.length; --i >= 0;) {
+    checkObject(objects[i], cacheData)
+  }
+}
+
+function checkObject (object, comparedData) {
+  for (let key in object) {
+    expect(key in comparedData).to.equal(true)
+    if (typeof object[key] === 'object' && !Array.isArray(object[key])) checkObject(object[key], comparedData[key])
+    else if (Array.isArray(object[key]));
+    else expect(`${object[key]}`).to.match(comparedData[key])
+  }
+}
+
+exports.init = data => {
+  cacheData = data
 }
