@@ -28,7 +28,8 @@ describe (...)
     it(...)
         checkObject({ test4: ['aaa', '123', { test5: '123' }, 'aaa', '123', { test5: '123' }] })
     it(...)
-        checkArray(['a', '123', { test1: '123' }, 'a', '123', { test1: '123' }], [/^[a-z]{1,10}$/, /^\d*$/, { test1: /^\d*$/ }])
+        checkArray([/^\d*$/, /[a-z]{1,10}/, { test1: /^\d*$/ }], ['123', 'a', { test1: '123' }, '123','a', { test1: '123' }], ['123', 'a', { test1: '123' }])
+
 ```
 ## Example
 * [checkType](https://github.com/KSH-code/easily-expect/blob/master/test/checkType.test.js)
