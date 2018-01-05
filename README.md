@@ -10,9 +10,12 @@ const { checkType, checkMatch, checkEqual, checkObject, init } = require('easily
 describe (...)
     init({
         test1: {
-        test2: /^\d*$/
+            test2: /^\d*$/
         },
-        test3: /^[a-z]{1,10}$/
+            test3: /^[a-z]{1,10}$/,
+            test4: [/^[a-z]{1,10}$/, /^\d*$/, {
+                test5: /^\d*$/
+        }]
     })
     it (...)
         checkType('string', '123', '0')
@@ -22,9 +25,15 @@ describe (...)
         checkEqual('abc', 'abc', 'aaa') // aaa is false
     it (...)
         checkObject({ test1: { test2: '123123123' } })
+    it(...)
+        checkObject({ test4: ['aaa', '123', { test5: '123' }, 'aaa', '123', { test5: '123' }] })
+    it(...)
+        checkArray([/^\d*$/, /[a-z]{1,10}/, { test1: /^\d*$/ }], ['123', 'a', { test1: '123' }, '123','a', { test1: '123' }], ['123', 'a', { test1: '123' }])
+
 ```
 ## Example
 * [checkType](https://github.com/KSH-code/easily-expect/blob/master/test/checkType.test.js)
 * [checkMatch](https://github.com/KSH-code/easily-expect/blob/master/test/checkMatch.test.js)
 * [checkEqual](https://github.com/KSH-code/easily-expect/blob/master/test/checkEqual.test.js)
 * [checkObject](https://github.com/KSH-code/easily-expect/blob/master/test/checkObject.test.js)
+* [checkArray](https://github.com/KSH-code/easily-expect/blob/master/test/checkArray.test.js)
