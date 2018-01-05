@@ -36,10 +36,28 @@ function checkObject (object, comparedData) {
   for (let key in object) {
     expect(key in comparedData).to.equal(true)
     if (typeof object[key] === 'object' && !Array.isArray(object[key])) checkObject(object[key], comparedData[key])
-    else if (Array.isArray(object[key]));
+    else if (checkArray(comparedData[key], object[key])) continue
     else expect(`${object[key]}`).to.match(comparedData[key])
   }
 }
+
+function checkArray (comparedData, ...objects) {
+  for (let k = objects.length; --k >= 0;) {
+    let object = objects[k]
+    if (Array.isArray(object)) {
+      let j = 0
+      for (let i = 0, length = object.length; i < length; i++) {
+        if (typeof object[i] === 'object' && !Array.isArray(object[i])) checkObject(object[i], comparedData[j])
+        else if (checkArray(comparedData[j], object[i])) continue
+        else expect(`${object[i]}`).to.match(comparedData[j])
+        j = (j + 1) % comparedData.length
+      }
+    } else return false
+  }
+  return true
+}
+
+exports.checkArray = checkArray
 
 exports.init = data => {
   cacheData = data
