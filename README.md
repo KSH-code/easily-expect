@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/KSH-code/easily-expect.svg?branch=master)](https://travis-ci.org/KSH-code/easily-expect)
-
+![Npm Version](https://img.shields.io/npm/v/easily-expect.svg?style=flat-square)
 # HOW TO USE ?
 ```
 npm install --save easily-expect
