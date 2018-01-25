@@ -29,9 +29,9 @@ describe (...)
         checkObject({ test4: ['aaa', '123', { test5: '123' }, 'aaa', '123', { test5: '123' }] })
     it(...)
         checkArray([/^\d*$/, /[a-z]{1,10}/, { test1: /^\d*$/ }], ['123', 'a', { test1: '123' }, '123','a', { test1: '123' }], ['123', 'a', { test1: '123' }])
-  it('Test Object type', () => {
-    checkValue({ a: 1 }, { b: true }, {})
-  })
+    it('Test Object type', () => {
+        checkValue({ a: 1 }, { b: true }, {})
+    })
 
 ```
 ## Example
