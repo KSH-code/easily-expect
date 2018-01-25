@@ -58,6 +58,12 @@ function checkArray (comparedData, ...objects) {
 }
 
 exports.checkArray = checkArray
+exports.checkValue = (...objects) => {
+  for (let k = objects.length; --k >= 0;) {
+    const object = objects[k]
+    expect(Boolean(object)).to.equal(true)
+  }
+}
 
 exports.init = data => {
   cacheData = data
