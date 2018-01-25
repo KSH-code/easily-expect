@@ -59,7 +59,7 @@ function checkArray (comparedData, ...objects) {
 
 exports.checkArray = checkArray
 exports.checkValue = (...objects) => {
-  for (let k = objects.length; --k >= 0;) {
+  for (let k = 0; k < objects.length; k++) {
     const object = objects[k]
     expect(Boolean(object)).to.equal(true)
   }
