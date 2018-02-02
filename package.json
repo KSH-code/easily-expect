@@ -1,11 +1,15 @@
 {
   "name": "easily-expect",
-  "version": "0.1.5",
+  "version": "1.0.0",
   "description": "You can easily use expect",
   "main": "index.js",
   "scripts": {
     "test": "npm run standard && node ./node_modules/mocha/bin/mocha $(find ./test -name '*.js') --require mocha-clean --reporter=mocha-better-spec-reporter",
     "standard": "standard \"./*.js\" \"test/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KSH-code/easily-expect.git"
   },
   "author": "KSH-Code <tjdgnsqn133@gmail.com> (github.com/ksh-code)",
   "license": "MIT",

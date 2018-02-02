@@ -58,7 +58,20 @@ function checkArray (comparedData, ...objects) {
 }
 
 exports.checkArray = checkArray
-
+exports.checkValue = (...objects) => {
+  for (let k = 0; k < objects.length; k++) {
+    const object = objects[k]
+    expect(Boolean(object)).to.equal(true)
+  }
+}
+exports.checkAllKeys = function checkAllKeys (keyNames, ...objects) {
+  exports.checkType('object', ...objects)
+  for (let i = 0; i < keyNames.length; i++) {
+    for (let j = 0; j < objects.length; j++) {
+      exports.checkEqual(true, Boolean(objects[j][keyNames[i]]))
+    }
+  }
+}
 exports.init = data => {
   cacheData = data
 }
