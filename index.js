@@ -64,7 +64,14 @@ exports.checkValue = (...objects) => {
     expect(Boolean(object)).to.equal(true)
   }
 }
-
+exports.checkAllKeys = function checkAllKeys (keyNames, ...objects) {
+  exports.checkType('object', ...objects)
+  for (let i = 0; i < keyNames.length; i++) {
+    for (let j = 0; j < objects.length; j++) {
+      exports.checkEqual(true, Boolean(objects[j][keyNames[i]]))
+    }
+  }
+}
 exports.init = data => {
   cacheData = data
 }

@@ -32,6 +32,9 @@ describe (...)
     it('Test Object type', () => {
         checkValue({ a: 1 }, { b: true }, {})
     })
+    it('Check Strings in Array', () => {
+        checkArray([/^\d*$/, /[a-z]{1,10}/], ['123', 'a', '123', 'a'], ['123', 'a', '123', 'a'])
+    })
 
 ```
 ## Example
@@ -41,3 +44,4 @@ describe (...)
 * [checkObject](https://github.com/KSH-code/easily-expect/blob/master/test/checkObject.test.js)
 * [checkArray](https://github.com/KSH-code/easily-expect/blob/master/test/checkArray.test.js)
 * [checkValue](https://github.com/KSH-code/easily-expect/blob/master/test/checkValue.test.js)
+* [checkAllKeys](https://github.com/KSH-code/easily-expect/blob/master/test/checkAllKeys.test.js)
