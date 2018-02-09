@@ -1,6 +1,6 @@
 {
   "name": "easily-expect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "You can easily use expect",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
   ],
   "dependencies": {
     "chai": "^4.1.2",
+    "easily-js": "^1.0.2",
     "fs": "0.0.1-security",
     "mocha-better-spec-reporter": "^3.1.0",
     "mocha-clean": "^1.0.0"
