@@ -12,6 +12,9 @@ describe('Test Equal', () => {
   it('Object Type Test', () => {
     checkEqual({}, {}/* , { a: 1 } */)
   })
+  it('Object Type Test', () => {
+    checkEqual({ a: 1 }, { a: 1 }/* , { a: 1 } */)
+  })
   it('null Type Test', () => {
     checkEqual(null, null/* , NaN */)
   })

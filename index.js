@@ -1,5 +1,6 @@
 'use strict'
 const { expect } = require('chai')
+const { deepEqual } = require('easily-js')
 let cacheData = {}
 exports.checkType = (dataType, ...objects) => {
   dataType = dataType.toLowerCase()
@@ -20,7 +21,7 @@ exports.checkMatch = (expression, ...objects) => {
 
 exports.checkEqual = (data, ...objects) => {
   for (let object of objects) {
-    if (!Array.isArray(object) && typeof object === 'object') expect(JSON.stringify(object)).to.equal(JSON.stringify(data))
+    if (!Array.isArray(object) && typeof object === 'object' && object !== null) expect(deepEqual(object, data)).to.equal(true)
     else expect(object).to.equal(data)
   }
 }
