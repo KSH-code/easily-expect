@@ -35,6 +35,9 @@ describe (...)
     it('Check Strings in Array', () => {
         checkArray([/^\d*$/, /[a-z]{1,10}/], ['123', 'a', '123', 'a'], ['123', 'a', '123', 'a'])
     })
+    it('1. simple test', () => {
+        checkAbove(2, 3, 4, 'abc'.length, 'abcd'.length)
+    })
 
 ```
 ## Example
@@ -45,3 +48,4 @@ describe (...)
 * [checkArray](https://github.com/KSH-code/easily-expect/blob/master/test/checkArray.test.js)
 * [checkValue](https://github.com/KSH-code/easily-expect/blob/master/test/checkValue.test.js)
 * [checkAllKeys](https://github.com/KSH-code/easily-expect/blob/master/test/checkAllKeys.test.js)
+* [checkAbove](https://github.com/KSH-code/easily-expect/blob/master/test/checkAbove.test.js)
