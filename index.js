@@ -72,6 +72,11 @@ exports.checkAllKeys = function checkAllKeys (keyNames, ...objects) {
     }
   }
 }
+exports.checkAbove = function checkAbove (n, ...objects) {
+  for (let i = 0; i < objects.length; i++) {
+    expect(objects[i]).to.be.above(n)
+  }
+}
 exports.init = data => {
   cacheData = data
 }
