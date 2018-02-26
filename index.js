@@ -78,6 +78,8 @@ exports.checkAbove = function checkAbove (n, ...objects) {
     expect(objects[i]).to.be.above(n)
   }
 }
+exports.checkEmpty = require('./checkEmpty')
+exports.checkNotEmpty = require('./checkNotEmpty')
 exports.init = data => {
   cacheData = data
 }
