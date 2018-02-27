@@ -80,6 +80,7 @@ exports.checkAbove = function checkAbove (n, ...objects) {
 }
 exports.checkEmpty = require('./checkEmpty')
 exports.checkNotEmpty = require('./checkNotEmpty')
+exports.checkBelow = require('./checkBelow')
 exports.init = data => {
   cacheData = data
 }
