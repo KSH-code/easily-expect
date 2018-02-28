@@ -7,7 +7,6 @@ const { expect } = require('chai')
  */
 module.exports = function checkNotEmpty (...objects) {
   for (let i = 0; i < objects.length; i++) {
-    console.log(objects[i])
     expect(objects[i]).to.not.be.empty
   }
 }
