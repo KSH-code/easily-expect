@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/KSH-code/easily-expect.svg?branch=master)](https://travis-ci.org/KSH-code/easily-expect)
 ![Npm Version](https://img.shields.io/npm/v/easily-expect.svg?style=flat-square)
+![Npm Download](https://img.shields.io/npm/dt/easily-expect.svg)
 # Usage
 ```
 npm install --save easily-expect
@@ -16,3 +17,5 @@ npm install --save easily-expect
 * [checkBelow](https://github.com/KSH-code/easily-expect/blob/master/test/checkBelow.test.js)
 * [checkEmpty](https://github.com/KSH-code/easily-expect/blob/master/test/checkEmpty.test.js)
 * [checkNotEmpty](https://github.com/KSH-code/easily-expect/blob/master/test/checkNotEmpty.test.js)
+* [checkMost](https://github.com/KSH-code/easily-expect/blob/master/test/checkMost.test.js)
+* [checkLeast](https://github.com/KSH-code/easily-expect/blob/master/test/checkLeast.test.js)

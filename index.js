@@ -81,6 +81,8 @@ exports.checkAbove = function checkAbove (n, ...objects) {
 exports.checkEmpty = require('./checkEmpty')
 exports.checkNotEmpty = require('./checkNotEmpty')
 exports.checkBelow = require('./checkBelow')
+exports.checkMost = require('./checkMost')
+exports.checkLeast = require('./checkLeast')
 exports.init = data => {
   cacheData = data
 }

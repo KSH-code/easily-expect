@@ -3,10 +3,11 @@ const { expect } = require('chai')
 
 /**
  *
+ * @param {Number} number
  * @param {Objects} objects
  */
-module.exports = function checkNotEmpty (...objects) {
+module.exports = function checkWithin (number, ...objects) {
   for (let i = 0; i < objects.length; i++) {
-    expect(objects[i]).to.not.be.empty
+    expect(objects[i]).to.be.at.least(number)
   }
 }
