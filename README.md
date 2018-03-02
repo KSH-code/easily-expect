@@ -19,3 +19,4 @@ npm install --save easily-expect
 * [checkNotEmpty](https://github.com/KSH-code/easily-expect/blob/master/test/checkNotEmpty.test.js)
 * [checkMost](https://github.com/KSH-code/easily-expect/blob/master/test/checkMost.test.js)
 * [checkLeast](https://github.com/KSH-code/easily-expect/blob/master/test/checkLeast.test.js)
+* [checkWithin](https://github.com/KSH-code/easily-expect/blob/master/test/checkWithin.test.js)

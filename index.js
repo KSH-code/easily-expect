@@ -83,6 +83,7 @@ exports.checkNotEmpty = require('./checkNotEmpty')
 exports.checkBelow = require('./checkBelow')
 exports.checkMost = require('./checkMost')
 exports.checkLeast = require('./checkLeast')
+exports.checkWithin = require('./checkWithin')
 exports.init = data => {
   cacheData = data
 }
